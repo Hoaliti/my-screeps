@@ -240,18 +240,18 @@ const releasePlans: CreepReleasePlans = {
                 return false
             },
 
-            // centerLink 修建完成
-            ({ room, centerLinkId }: TransporterPlanStats) => {
-                if (!centerLinkId) return true
-
-                // 发布中央运输单位
-                creepApi.add(`${room.name} manager`, 'manager', {
-                    sourceId: centerLinkId
-                }, room.name)
-
-                room.log(`发布 linkFiller`, 'transporter', 'green')
-                return false
-            },
+            // // centerLink 修建完成
+            // ({ room, centerLinkId }: TransporterPlanStats) => {
+            //     if (!centerLinkId) return true
+            //
+            //     // 发布中央运输单位
+            //     creepApi.add(`${room.name} manager`, 'manager', {
+            //         sourceId: centerLinkId
+            //     }, room.name)
+            //
+            //     room.log(`发布 linkFiller`, 'transporter', 'green')
+            //     return false
+            // },
 
             // centerLink 修建完成
             ({ room, centerLinkId, centerPos }: TransporterPlanStats) => {
